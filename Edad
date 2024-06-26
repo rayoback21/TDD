@@ -1,0 +1,34 @@
+fun main() {
+    println("TDD")
+     if(validarEdadTest()) println("Correcto") else println("Error")
+     if(validarEdadTests2())println("Correcto") else	println("Error")
+     if(validarEdadTests3())println("Correcto") else println("Error")
+   
+
+}
+
+fun validarEdad(edad: Int): String{
+    if (edad >= 18 && edad >= 0) {
+       return "ACCEPTED"
+    } 
+     return "REJECTED"
+}
+
+//Paso 1 prueba que falle de edad
+fun validarEdadTest():Boolean{
+    val actualEdad=validarEdad(19)
+    val actualE= "ACCEPTED"
+    return actualEdad == actualE
+}
+
+fun validarEdadTests2(): Boolean{
+     val actualEdad=validarEdad(22)
+    val actualE= "ACCEPTED"
+    return actualEdad == actualE
+}
+
+fun validarEdadTests3(): Boolean{
+     val actualEdad=validarEdad(25)
+    val actualE= "ACCEPTED"
+    return actualEdad == actualE
+}
