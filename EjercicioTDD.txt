@@ -1,0 +1,45 @@
+/**
+ * You can edit, run, and share this code.
+ * play.kotlinlang.org
+ */
+fun main() {
+    println("TDD")
+    if(sumaParesTest()) println("Passed") else println("Failed")
+     if(sumaImparesTest()) println("Passed") else println("Failed")
+      if(sumaImparesDosTest()) println("Passed") else println("Failed")
+      if(sumaCuandoLosNumerosSeanNegativosTest()) println("Passed") else println("Failed")
+}
+
+
+fun sumaPares(a: Int, b: Int): Int{
+    //Paso 2.Hacer que la prueba pase
+    if (a < 0 || b < 0 || a % 2 != 0 || b % 2 != 0) return -1
+    return a+b
+}
+//Paso1 escribrir prueba que falle
+fun sumaParesTest():Boolean{
+    val actualValue=sumaPares(2,2)
+    val expectedValue = 4
+    return actualValue == expectedValue
+}
+
+//Paso2 escribrir prueba que falle
+fun sumaImparesTest():Boolean{
+    val actualValue=sumaPares(5,2)
+    val expectedValue = -1
+    return actualValue == expectedValue
+}
+
+//Paso3 escribrir prueba que falle
+fun sumaImparesDosTest():Boolean{
+    val actualValue=sumaPares(2,7)
+    val expectedValue = -1
+    return actualValue == expectedValue
+}
+
+//Paso3 escribrir prueba que falle
+fun sumaCuandoLosNumerosSeanNegativosTest():Boolean{
+    val actualValue=sumaPares(-2,4)
+    val expectedValue = -1
+    return actualValue == expectedValue
+}
